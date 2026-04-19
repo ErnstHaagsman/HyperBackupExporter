@@ -18,7 +18,7 @@ docker run -d \
     --name hyperbackup-exporter \
     -v /var/packages/HyperBackup/var/last_result/backup.last:/var/packages/HyperBackup/var/last_result/backup.last:ro \
     -v /var/packages/HyperBackup/etc/synobackup.conf:/var/packages/HyperBackup/etc/synobackup.conf:ro \
-    ghcr.io/ernsthaagsman/hyperbackupexporter:v0.1
+    ghcr.io/ernsthaagsman/hyperbackupexporter:v0.2.0
 ```
 
 Then, in your prometheus configuration, add: 
