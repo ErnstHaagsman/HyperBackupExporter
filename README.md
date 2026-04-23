@@ -16,9 +16,9 @@ On the Synology NAS, with Docker installed, connect using SSH and run:
 docker run -d \
     -p 6533:6533 \
     --name hyperbackup-exporter \
-    -v /var/packages/HyperBackup/var/last_result/backup.last:/var/packages/HyperBackup/var/last_result/backup.last:ro \
-    -v /var/packages/HyperBackup/etc/synobackup.conf:/var/packages/HyperBackup/etc/synobackup.conf:ro \
-    ghcr.io/ernsthaagsman/hyperbackupexporter:v0.2.0
+    -v /var/packages/HyperBackup/var/last_result:/var/packages/HyperBackup/var/last_result:ro \
+    -v /var/packages/HyperBackup/etc:/var/packages/HyperBackup/etc:ro \
+    ghcr.io/ernsthaagsman/hyperbackupexporter:v0.2.1
 ```
 
 Then, in your prometheus configuration, add: 
