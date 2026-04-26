@@ -21,6 +21,10 @@ docker run -d \
     ghcr.io/ernsthaagsman/hyperbackupexporter:v0.2.1
 ```
 
+**NOTE** It is necessary to mount the folder, not the individual files. If the files
+are mounted, updates to the files will not be seen by the exporter. The files are resolved
+to a specific inode when the container is started, and not updated when the files are changed.
+
 Then, in your prometheus configuration, add: 
 
 ```yaml
